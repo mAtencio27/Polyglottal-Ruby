@@ -2,7 +2,7 @@
   Journal &ndash; <%= DateTime.now.to_s(:nice_date) %>
 <% end %>
 
-  <div class="columns mt-6 is-centered"></div>
+  <div class="columns mt-6 is-centered">
     <% @entries.each do |entry| %>
       <div class="column is-one-quarter">
         <div class="card">
@@ -11,7 +11,6 @@
           </header>
           <div class="card-content">
             <div class ="content">
-              <p><span class="has-text-weight-bold"><%= entry.title %></span></p>
               <p><span class="has-text-weight-bold"><%= entry.post %></span></p>
               <p class="italic">Logged <%= time_ago_in_words(entry.created_at)%> ago</p>
             </div>
@@ -25,5 +24,3 @@
       </div>
     <% end %>
   </div>
-
-<br>
