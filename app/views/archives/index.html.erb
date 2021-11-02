@@ -4,6 +4,17 @@
             <h3 class="is-size-4 has-text-weight-bold mb-4 has-text-centered">
             Entries for <%=day%></h3>
 
+
+
+            <nav class="level is-mobile">
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Film</p>
+                        <p class="title"></p>
+                    </div>
+                </div>
+            </nav>
+
             <% entries.each do |entry| %>
                 <%= link_to entry_path(entry)do%>
                     <div class="card">
